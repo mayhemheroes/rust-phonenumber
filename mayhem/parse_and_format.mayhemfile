@@ -1,0 +1,7 @@
+project: rust-phonenumber
+target: parse_and_format
+duration: 600
+cmds:
+    - cmd: /fuzzers/fuzz_parse_and_format
+testsuite:
+    - file://corpus/numbers

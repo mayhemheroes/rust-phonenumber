@@ -15,4 +15,4 @@ FROM ubuntu:latest AS PACKAGE
 COPY --from=BUILDER /src/fuzz/corpus/ /corpus/numbers
 
 # Copy the fuzzers to the final image
-COPY --from=builder /src/./fuzz/target/x86_64-unknown-linux-gnu/release/fuzz_* /fuzzers/
+COPY --from=BUILDER /src/./fuzz/target/x86_64-unknown-linux-gnu/release/fuzz_* /fuzzers/
